@@ -21,10 +21,10 @@ def translate_text(text, src_lang, dest_lang):
 @click.option('--src-lang', prompt='Enter the source language name', help='Source language name (e.g., English)')
 @click.option('--dest-lang', prompt='Enter the destination language name', help='Destination language name (e.g., French)')
 def main(text, src_lang, dest_lang):
-    console.print("Welcome to the Interactive Translator!", style="bold green")
+    console.print("Welcome to Tradi!", style="bold green")
 
     if text.lower() == 'exit':
-        console.print("Exiting the translator. Goodbye!", style="bold red")
+        console.print("Exiting Tradi. Goodbye!", style="bold red")
         return
 
     src_lang_name_lower = src_lang.lower()
