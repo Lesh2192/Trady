@@ -1,3 +1,4 @@
+import sys
 import click
 import os
 from googletrans import Translator, LANGUAGES
@@ -21,10 +22,10 @@ def translate_text(text, src_lang, dest_lang):
 @click.option('--src-lang', prompt='Enter the source language name', help='Source language name (e.g., English)')
 @click.option('--dest-lang', prompt='Enter the destination language name', help='Destination language name (e.g., French)')
 def main(text, src_lang, dest_lang):
-    console.print("Welcome to Tradi!", style="bold green")
+    console.print("Welcome to the Interactive Translator!", style="bold green")
 
     if text.lower() == 'exit':
-        console.print("Exiting Tradi. Goodbye!", style="bold red")
+        console.print("Exiting the translator. Goodbye!", style="bold red")
         return
 
     src_lang_name_lower = src_lang.lower()
@@ -42,10 +43,12 @@ def main(text, src_lang, dest_lang):
     translated_text = translate_text(text, src_lang_code, dest_lang_code)
     console.print(f"Translated text in {dest_lang}: {translated_text}", style="bold blue")
 
+    # Check for Ctrl + L to clear the screen
     while True:
-        if click.getchar() == '\x12':
+        if click.getchar() == '\x12':  # Ctrl + L
             clear_screen()
             break
 
 if __name__ == "__main__":
+    console.print("Welcome to the Interactive Translator!", style="bold green")
     main()
