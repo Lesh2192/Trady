@@ -20,7 +20,7 @@ Tradi is an interactive command-line translator that allows you to translate tex
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/your-username/Tradi.git
+   git clone https://github.com/Mempa21/Tradi.git
    cd Tradi
    ```
 
